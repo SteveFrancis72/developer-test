@@ -1,0 +1,21 @@
+﻿@model OrangeBricks.Web.Controllers.Viewings.ViewModels.MyViewingsViewModel
+@{
+    ViewBag.Title = "My Viewings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>My Viewings</h2>
+<p>Here is a list of your Viewings:</p>
+@foreach (var viewing in Model.Viewings)
+{
+    <hr />
+    <div>
+        <h3>@viewing.Property.StreetName</h3>
+        <p>@viewing.Property.NumberOfBedrooms bedroom @viewing.Property.PropertyType</p>
+        <p>@viewing.Property.Description</p>
+
+        <p><strong>Viewing Made For: </strong> @viewing.ViewingAt.ToLongTimeString() on @viewing.ViewingAt.ToShortDateString()</p>
+        <p><strong>Viewing Created At: </strong> @viewing.CreatedAt.ToLongTimeString() on @viewing.CreatedAt.ToShortDateString()</p>
+ 
+    </div>
+
+}

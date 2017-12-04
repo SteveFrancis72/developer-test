@@ -26,6 +26,7 @@
                     {
                         <li>@Html.ActionLink("Properties", "Index", "Property")</li>
                         <li>@Html.ActionLink("Offers", "MyOffers", "Offers")</li>
+                        <li>@Html.ActionLink("Viewings", "MyViewings", "Viewings")</li>
                         if (User.IsInRole("Seller"))
                         {
                             <li>@Html.ActionLink("Create Listing", "Create", "Property")</li>
