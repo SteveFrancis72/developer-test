@@ -10,10 +10,14 @@ namespace OrangeBricks.Web.Models
 
         public int Amount { get; set; }
 
+        public virtual Property Property { get; set; }
+
         public OfferStatus Status { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
+
+        public string BuyerId { get; set; }
     }
 }
